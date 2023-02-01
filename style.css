@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Dancing+Script&family=Lato:wght@300;400&family=Montserrat:wght@100&family=Quintessential&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@300;400;700&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+    background-color:#344966;
+}
+.flex-container{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+
+.flex-head{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    height : 25px;
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    color: white;
+}
+p{
+    height:8px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+
+.flex-button{
+    /*
+    display: flex;
+    margin: 20px;
+    padding:20px;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    */
+    /* border : none; */
+    
+    text-align: center;
+}
+
+.btnQR{
+    margin: 20px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #2b3d55;
+    color: white;
+    border: transparent;
+    border-radius: 0.2rem;
+}
+
+.btnbar{
+    margin: 20px;
+    padding: 15px;
+    cursor:pointer;
+    background-color: #2b3d55;
+    color:white;
+    border: transparent;
+    border-radius: 0.2rem;
+}
+.btnQR:hover{
+    border-color: white;
+}
+.btnbar:hover{
+    border-color: white;
+}
+
+/* .flex-form{
+    display: flex;
+    flex-direction: column;
+} */
+
+
+.flex-input{
+    display: flex;
+    gap: 2rem;
+    width: 70%;
+}
+
+.userinput {
+    background-color: hsla(0,0%,100%,.04);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #000;
+    text-align: center;
+    /* width: 70%; */
+}
+.userinput .flex-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 50%;
+}
+.flex-form {
+    display: block;
+    margin-top: 0em;
+
+}
+
+.flex-form input{
+    background-color: #b4cded;
+    padding: 20px 15px;
+    border-radius: 5px;
+
+}
+.imgdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color: hsla(0,0%,100%,.04);
+    border-radius: 8px;
+}
+
+.qrimg{
+    margin-top: 10px;
+    height: 140px;
+    width: 135px;
+    border: 1px solid black;
+}
+.downbtn  .genbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.downbtn{
+    border-radius: 5px;
+    margin: 30px;
+    padding: 10px;
+    width: 135px;
+    background-color: #BFCC94;
+}
+button .fa-download {
+    padding-right: 5px;
+}
+
+.genbtn{
+    background-color: #BFCC94;
+    width:40%;
+    border-radius:5px;
+    padding: 10px 10px;
+    justify-items: center;
+    margin-left: 30%;
+} 
+
+button .fa-arrows-rotate{
+    padding: 5px;
+}
