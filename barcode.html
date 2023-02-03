@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />                                      
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="JsBarcode.all.min.js"></script>
+    <title>Barcode Generator</title>
 </head>
 <body class="flex-container">
     <div class="flex-head">
@@ -28,7 +29,7 @@
             </form>
         </div> 
         <div class="imgdiv">
-            <div class="qrimg"></div>
+            <div class="qrimg" id="barcode"></div>
             <button class = "downbtn">Download <i class="fa-solid fa-download"></i></a></button>
             <!-- <button style="font-size:24px">Download<i class="material-icons">import_export</i></button>  -->
         </div> 

@@ -69,12 +69,12 @@ p{
     border: transparent;
     border-radius: 0.2rem;
 }
-.btnQR:hover{
-    border-color: white;
+
+.btnQR:hover , .btnbar:hover{
+    background-color:#1b2736;
+    border : white;
 }
-.btnbar:hover{
-    border-color: white;
-}
+
 
 /* .flex-form{
     display: flex;
@@ -130,7 +130,7 @@ p{
     margin-top: 10px;
     height: 140px;
     width: 135px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .downbtn  .genbtn{
     display: flex;
@@ -145,11 +145,17 @@ p{
     padding: 10px;
     width: 135px;
     background-color: #BFCC94;
+    /* display : none; */
+    cursor: pointer;
 }
 button .fa-download {
     padding-right: 5px;
 }
 
+.downbtn:hover , .genbtn:hover{
+    background-color:antiquewhite;
+    border : black;
+}
 .genbtn{
     background-color: #BFCC94;
     width:40%;
@@ -157,6 +163,7 @@ button .fa-download {
     padding: 10px 10px;
     justify-items: center;
     margin-left: 30%;
+    cursor : pointer;
 } 
 
 button .fa-arrows-rotate{

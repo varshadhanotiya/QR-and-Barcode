@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />                                      
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>QRcode Generator</title>
 </head>
 <body class="flex-container">
     <div class="flex-head">
@@ -21,20 +23,28 @@
 
       <div class="flex-input">
         <div class = "userinput">
-            <form class = "flex-form">
-                <input type="text" id="QRstring" name="QRstring" placeholder="Type something....."><br>
-                <button class="genbtn" type="submit">Generate <i class='fa-solid fa-arrows-rotate'></i></button>
+            <form action="/" class = "flex-form" id="qr-generation-form">
+                <input type="text"
+                   name="qr-code-content"
+                   id="qr-content"
+                   value=""
+                   placeholder="Enter QR content"
+                   autocomplete="off" required/><br>
+                <button class="genbtn" type="submit" value="Generate QR Code" onclick="qrgen()">Generate <i class='fa-solid fa-arrows-rotate'></i></button>
                 <!-- <button style="font-size:24px">Generate<i class="material-icons">import_export</i></button> -->
             </form>
         </div> 
         <div class="imgdiv">
-            <div class="qrimg"></div>
-            <button class = "downbtn">Download <i class="fa-solid fa-download"></i></a></button>
+            <div class="qrimg" id="qr-code"></div>
+            <div id="qrdownload" style="display:none;">
+            <button class="downbtn" id="secondbtn"  onclick="downloadqr()">Download <i class="fa-solid fa-download"></i></button></a>
+            </div>
             <!-- <button style="font-size:24px">Download<i class="material-icons">import_export</i></button>  -->
         </div> 
 
       </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
