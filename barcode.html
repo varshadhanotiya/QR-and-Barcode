@@ -25,110 +25,15 @@
             <form action="/" class = "flex-form" id = "bar-generation-form">
                 <input type="text" class = "input" id="bar-content" name="bar-code-content" placeholder="Type something....." autocomplete="off" required><br>
                 <button id = "generatebar" class="genbtn" type="submit" onclick="generatebarcode()">Generate <i class='fa-solid fa-arrows-rotate'></i></button>
-                <!-- <button style="font-size:24px">Generate<i class="material-icons">import_export</i></button> -->
             </form>
         </div> 
         <div class="imgdiv">
-            <div class="qrimg" ><svg id="barcode"></svg></div> 
-            <!-- <div class="qrimg" id="barcode"></div> -->
+            <div class="qrimg"><svg id="barcode"></svg></div> 
             <div id="bardownload" style="display:none;">
             <button class = "downbtn" onclick="bardownload()">Download <i class="fa-solid fa-download"></i></a></button>
-
-            <!-- <button style="font-size:24px">Download<i class="material-icons">import_export</i></button>  -->
         </div> 
       </div>
     </div>
-
-<script type="text/javascript">
-
- /*
- //working 
-function barcode(){
-  var data = document.querySelector('.input').value;
-  JsBarcode('#barcode' , data , {
-    background : '#fff',
-    color : '#000',
-    height : 100,
-    displayValue : false
-  });
-}
-*/
-
-
-var a = 0;
-  let barcode;
-  function generatebarcode()
-  {  
-      var barinput = document.getElementById("bar-content").value;
-      
-      if(barinput == null || barinput == "")
-      {
-          alert("Enter text..");
-      }
-      else{
-          if(a == 0)
-          {
-            //let barContentInput = document.getElementById("bar-content");
-                
-            function barcode(){
-                data = document.querySelector('.input').value;
-                JsBarcode('#barcode' , data , {
-                  background : '#fff',
-                  color : '#000',
-                  height : 100,
-                  displayValue : false
-              });
-            }
-
-                let barCode;
-                let barGenerationForm = document.getElementById("bar-generation-form");                
-
-                // Event listener for form submit event
-                barGenerationForm.addEventListener("submit", function (event) {
-
-                // Prevent form submission
-                event.preventDefault();
-
-                //let barContent = barContentInput.value;
-                if (barCode == null) {
-                    // Generate code initially
-                    barCode = barcode();
-                } else {
-                    // If code already generated then make 
-                    // again using same object
-                    //document.getElementById('bardownload').style.display="block";
-                    barCode.makeCode(barinput);
-                }
-          });
-                a++;
-               document.getElementById('bardownload').style.display="block";
-          }
-                else{
-                    barCode.makeCode(barinput);
-                    document.getElementById('bardownload').style.display="block";
-                }
-            }
-  }
-  
-  function downloadURI(url,name) {
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = url;
-    document.body.appendChild(link);
-    link.click();   
-  }
-
-  function downloadImageURL()
-  {
-    let dataUrl = document.querySelector('#barcode').querySelectorAll('svg');
-    //console.log(dataUrl);
-    downloadURI(dataUrl,'Barcode.jpg');
-  }
-
-  function bardownload()
-  {
-    setTimeout(downloadImageURL(),1000);
-  }
-  </script>
+  <script src="script.js"></script>
   </body>
   </html>
